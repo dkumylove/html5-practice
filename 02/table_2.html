@@ -1,0 +1,53 @@
+<!-- 보일러플레이트(boilerplate)
+    기본적으로 만들어져 있는 어떤 내용에 대한 틀을 말한다. 약간의 수정으로 결과물을 빠르게 만들 수 있도록 한다 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px
+            solid #ccc;
+        }
+        th {
+            padding: 15px;
+        }
+        tr > td:nth-child(odd){
+            width: 120px;
+            /* > : 다음
+            nth : n번째
+            odd : 홀수번째
+            even : 짝수번쨰
+            tr태그에서 td태그가 홀수인 경우 망 적용 */
+        }
+        tr > td:nth-child(even){
+            width: 300px;
+            /* > : 다음
+            nth : n번째
+            odd : 홀수번째
+            even : 짝수번쨰
+            tr태그에서 td태그가 홀수인 경우 망 적용 */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>이름</th>
+            <td>홍길동</td>
+            <th>연락처</th>
+            <td>010-1234-5678</td>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td colspan="3">서울시 마포구 대흥동</td>
+        </tr>
+        <tr>
+            <th>자기소개</th>
+            <td colspan="3">호형호제</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 : 그룹묶기</title>
+    <style>
+        ul {
+            /* li 태그를 꾸며주는 요소 없음(앞에점x) */
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 폼 : 그룹묶기 fieldset/legend -->
+    <form>
+        <!-- 개인정보그룹 -->
+        <fieldset>
+            <legend>개인정보</legend>
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" autocomplete="off">
+                </li>
+                <li>
+                    <label for="mail">메일주소</label>
+                    <input type="text" id="mail" autocomplete="off">
+                </li>
+            </ul>
+        </fieldset>
+
+        <!-- 로그인정보그룹 -->
+        <fieldset>
+            <legend>로그인정보</legend>
+            <ul>
+                <li>
+                    <label for="id">아이디</label>
+                    <input type="text" id="id" autocomplete="off">
+                </li>
+                <li>
+                    <label for="pwd">패스워드</label>
+                    <input type="password" id="pwd" autocomplete="off">
+                </li>
+                <li>
+                    <label for="">자동로그인</label>
+                    <input type="password" id="pwd" autocomplete="off">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* table 속성 */
+        table {
+            width: 60%;
+            border: 1px solid #222;
+            border-collapse: collapse;
+        }
+
+         /* thead 속성 */
+         thead {
+            /* 제목행의 배경색 */
+            background-color: dodgerblue;
+        }
+
+         /* th, td 속성 */
+        th, td {
+            /* 둘레 선그리기 */
+            border: 1px solid #222;
+            /* 여백 */
+            padding: 10px;
+            /* 글씨크기 */
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>식단표 테이블 만들기</h1>
+    <table>
+        <caption>이번주 식단표</caption>
+        <thead>
+            <tr>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th>토</th>
+                <th>일</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td colspan="2">쌀밥</td>
+                <td colspan="3">잡곡밥</td>
+                <td>스파게티</td>
+                <td>짜장명</td>
+            </tr>
+            <tr>
+                <td>불고기</td>
+                <td>떡갈비</td>
+                <td>미니돈까스</td>
+                <td>오징어볶음</td>
+                <td>제육볶음</td>
+                <td rowspan="2">피클</td>
+                <td>단무지</td>
+            </tr>
+            <tr>
+                <td>배추김치</td>
+                <td>깍두기</td>
+                <td>미소된장국</td>
+                <td>동치미</td>
+                <td>고추절임</td>
+                <td>짬뽕국물</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

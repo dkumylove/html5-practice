@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="user_id">아이디 :
+            <input type="text" id="user_id" size="10" />
+        </label>
+        <label for="user_pw">비밀번호 :
+            <input type="password" id="user_pw" size="10" />
+        </label>
+        <input type="submit" value="로그인" />
+        <input type="hidden" id="hidden_valus" value="숨겨진값" />
+        <input type="button" value="눌러주세요!" onclick="alertHidden()">
+    </form>
+
+    <script> 
+        function alertHidden() {
+            let hiddenValus = document.gerElemenrById("hidden_valus")
+            alert(hiddenValus.valus)
+        }
+    </script>
+</body>
+</html>

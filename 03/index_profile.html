@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개서</title>
+    <style>
+        /* 태그1, 태그2에서, : 나열연산자로 태그1과 태그2 둘다를 의미함 */
+        /* border : 태그 주번에 선을 그린다, 두께 선모양 선색상 */
+        /* border-collapse : 선의 중첩방지, 테두리선이 겹치는 경우 단일선으로 보이게해주는 속성 */
+        /* padding: 사방의 여백을 주는 것 */
+        /* font-size: 글씨크기 
+            em : 가상크기 : 화면에 상대적으로 맞춰서 */
+
+        /* table 속성 */
+        table {
+            /* 표의 너비*/
+            width: 70%;
+            /*1픽셀 검점 표테두리*/
+            border: 1px solid #222; 
+            /* 선중첩 */
+            border-collapse: collapse;
+        }
+
+        /* thead 속성 */
+        thead {
+            /* 제목행의 배경색 */
+            background-color: #099;
+        }
+
+        /* th, td 속성 */
+        th, td {
+            /* 둘레 선그리기 */
+            border: 1px solid #c66;
+            /* 여백 */
+            padding: 10px;
+            /* 글씨크기 */
+            font-size: 0.9em;
+        }
+
+        /* container 속성 */
+        #container {
+            position: absolute;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        /* aside 속성 */
+        aside {
+            float: left;
+            padding: 20px 40px;
+            width: 270px;
+            height: 100%;
+        }
+
+        /* main 속성 */
+        #main {
+            float: right;
+            width: 600px;
+            height: 100%;
+            padding: 20px 40px;
+        }
+
+        /* a 속성 */
+        a, a:visited {
+            /* a, a태그의 링크를 한번이라도 눌러보았을떄 */
+            text-decoration: none;
+            color: black;
+        }
+
+        /* sns>ul 속성 */
+        #sns > ul {
+            /* id="sns"인 태그를 찾아서, 그 내부의 ul태그를 가리킴 */
+            padding-left: 0; /* 목록내용을 들여쓰기 하지 마세요 */
+        }
+
+        /* sns>ul>li 속성  */
+        #sns > ul > li {
+            /* 태그를 가로배열하고 남으면 다음줄로 */
+            display: inline-block;
+            /* 각 항목의 너비 */
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 메인틀 역할을 하는 영역태그(div)  시작-->
+    <div id="container">
+        <!-- 왼쪽 영역(사이드바) 시작 -->
+        <aside>
+            <div id="namecard">
+                <img src="./pf.jpg" alt="">
+                <h1>홈페이지</h1>
+                <p>오늘은 남은 인생이 시작되는 첫쨰날</p>
+            </div>
+            <div id="detail">
+                <p>Jeju, Korea</p>
+                <p>jeju@jaju.com</p>
+            </div>
+            <div id="sns">
+                <h2>SNS</h2>
+                <ul>
+                    <li>
+                        <a href="http://www.naver.com" target="_blank">네이버로</a>
+                    </li>
+                    <li>
+                        <a href="http://www.google.com" target="_blank">구글로</a>
+                    </li>
+                </ul>
+            </div>
+        </aside> <!-- 왼쪽 영역 끝 -->
+
+        
+        <!-- 가운데 메인내용 시작 -->
+        <div id="main">
+
+            <!-- 자기소개 -->
+            <section>
+                <h2>Who am I?</h2>
+                <p><mark style="color: rgb(70, 2, 70); background-color: plum;">프론트 앤드 웹기술</mark>에 관심이 많습니다.<br>
+                현재 제주의 한 시골 마을에서 코딩 중입니다.</p>
+            </section>
+            <hr>
+
+            <!-- 경력 -->
+            <section>
+                <h2>Experience</h2>
+                <ul>
+                    <li>프론트엔드 개발
+                        <ul>
+                            <li>업무내용</li>
+                            <li>업무내용업무내용</li>
+                            <li>업무내용 업무내용</li>
+                        </ul>
+                    </li>
+                    <li>웹 디자인
+                        <ul>
+                            <li>그래픽 업무</li>
+                            <li>그래픽 내용</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <hr>
+
+            <!-- 숙련도 -->
+            <section>
+                <h2>Skills</h2>
+            </section>
+            <hr>
+
+            <!-- 학력 -->
+            <section>
+                <h2>Education</h2>
+                <table>
+                    <caption>학력사항</caption>
+                    <thead>
+                        <tr>
+                            <th>출신학교</th>
+                            <th>전공</th>
+                            <th>기간</th>
+                            <th>구분</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>ㅇㅇㅇ대학교</td>
+                            <td>컴퓨터전공</td>
+                            <td>2004.3 ~ 2008.2</td>
+                            <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>ㅇㅇ고등학교</td>
+                            <td>-</td>
+                            <td>2001.3 ~ 2004.2</td>
+                            <td>졸업</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div> <!-- 가운데 메인내용 끝 -->
+
+    </div> <!-- 메인틀 역할읗 하는 영역태그(div)  끝-->
+</body>
+</html>

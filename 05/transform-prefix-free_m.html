@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <!-- 호환성을 확장하기 위해 CSS외부모듈 라이브러리 추가 -->
+    <script src="prefixfree.min.js"></script>
+   
+    <style>
+        .box {
+            /* 위젯의 위치지정방식 화면 좌표사용 */
+            position:absolute;
+			left:50px; 
+			top:70px; 
+			width:100px; /* 너비 */
+			height:60px; /* 높이 */
+			background:#fff; /**/
+			border:2px solid green; /* 바깥 테두리, 선의굵기 모양 색*/
+			text-align:center; /* 텍스트의 위치 : 중앙 */
+			line-height:60px; /* 줄과 줄사이의 간격 */
+        }
+        .box:hover {
+            /* 특정 모양을 변형해라 
+            transform : 변형할 동작(매개변수);
+                rotate(회전각) : 회전각만큼 도형을 회전하라*/
+            transform: rotate(30deg);    
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Mouse Over</div>
+</body>
+</html>
