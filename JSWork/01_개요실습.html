@@ -56,5 +56,68 @@
     <button onclick="changeColor()" > onclick 변경</button>
     <!--코드가 노출되기 때문에 요즘 선호하지 않음-->
 
+
+    <h2> 문제2. 크기변경</h2>
+    <p>버튼에 따라 크기 조절이 가능하도록 만들기</p>
+
+    <div id="div2" class="div-test"></div>
+    <button onclick="setSize(1)">50*50</button>
+    <button id="btn2">100*100</button>
+    <button onclick="setSize(3)">200*200</button>
+
+    <script>
+        //alert(div2);
+        btn2.addEventListener('click', function(){
+            setSize(2);
+        });
+        function setSize(idx){
+            if(idx == 1) {
+                //alert(idx);
+                div2.style.width = '50px';
+                div2.style.height = '50px';
+            } else if(idx == 2) {
+                div2.style.width = '100px';
+                div2.style.height = '100px';
+            } else if(idx == 3) {
+                div2.style.width = '200px';
+                div2.style.height = '200px';
+            }
+        }
+
+    </script>
+
+    <h2>문제3. 테이블만들기</h2>
+    <p>
+        prompt()로 사용자로부터 행과 열의 개수를 입력받아 테이블 만들기<br>
+        아래의 div xormdp innerHTML 속성을 사용해서 만들어진 테이블 포험한다.
+    </p>
+    <button id="makeTableBtu">테이블만들기</button>
+    <div id="div3"></div>
+
+    <script>
+        makeTableBtu.addEventListener('click', makeTable);
+
+        function makeTable(){
+            let row = prompt('테이블의 행의 갯수는?');
+            let col = prompt('테이블의 열의 갯수는?');
+
+            alert(`${row}행 ${col} 열의 테이블을 생성 합니다.`)
+            
+            let table = "<table border='1'>";
+            for(let i=0; i<row; i++){
+                table += "    <tr>";
+                    for(let j=0; j<col; j++){
+                        table += `       <td>${i+'-'+j}</td>`;
+                    }
+                table += "    </tr>";
+            }
+
+            table += "</table>"
+            div3.innerHTML = table;
+            
+        }
+    </script>
+
+
 </body>
 </html>
