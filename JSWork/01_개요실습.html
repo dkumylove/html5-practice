@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-test {
+            border: 1px solid;
+            width: 100px;
+            height: 100px;
+            background-color: mediumpurple;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            // chang : 요소의 변경사항이 있으면 실행 되는 함수
+            selectColor.addEventListener('chang', changeColor);
+        }
+       
+        /*
+            color 요소의 선택된 색상으로 div 박스의 색상을 변경 
+        */
+        function changeColor(){
+            //alert('test');
+
+            // 요소를 선택하는 방법
+            let selectId1 = document.getElementById("selectColor");
+            let selectId2 = document.querySelector("#selectColor");
+            // 아이디로 요소선택
+            selectId3 = selectColor.value;
+
+            console.log(selectId1, selectId2, selectId3);
+
+            let color = selectId3.value;
+            let div = document.querySelector(".div-test");
+            div.style.backgroundColor = color;
+        }
+    </script>
+
+    <h2>개요실습 문제</h2>
+    <hr>
+
+    <p>
+        색상 선택 후 변경 버튼을 클릭하면 색상이 변경되록 만들기
+    </p>
+
+    <div class="div-test"></div>
+    <input type="color" id="selectColor" onchange="changeColor()">
+    <p>addEventListener 이용하는 방법</p>
+    <button> addEventListener 변경</button>
+
+    <p>onclick 속성을 이용하는 방법</p>
+    <button onclick="changeColor()" > onclick 변경</button>
+    <!--코드가 노출되기 때문에 요즘 선호하지 않음-->
+
+</body>
+</html>
